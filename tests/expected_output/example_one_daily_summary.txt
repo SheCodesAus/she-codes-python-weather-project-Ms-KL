@@ -1,0 +1,20 @@
+---- Friday 02 July 2021 ----
+  Minimum Temperature: 9.4°C
+  Maximum Temperature: 19.4°C
+
+---- Saturday 03 July 2021 ----
+  Minimum Temperature: 13.9°C
+  Maximum Temperature: 20.0°C
+
+---- Sunday 04 July 2021 ----
+  Minimum Temperature: 13.3°C
+  Maximum Temperature: 16.7°C
+
+---- Monday 05 July 2021 ----
+  Minimum Temperature: 12.8°C
+  Maximum Temperature: 16.1°C
+
+---- Tuesday 06 July 2021 ----
+  Minimum Temperature: 11.7°C
+  Maximum Temperature: 16.7°C
+

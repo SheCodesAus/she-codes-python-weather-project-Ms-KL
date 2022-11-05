@@ -1,0 +1,32 @@
+---- Friday 19 June 2020 ----
+  Minimum Temperature: 8.3°C
+  Maximum Temperature: 7.8°C
+
+---- Saturday 20 June 2020 ----
+  Minimum Temperature: 10.6°C
+  Maximum Temperature: 19.4°C
+
+---- Sunday 21 June 2020 ----
+  Minimum Temperature: 14.4°C
+  Maximum Temperature: 22.2°C
+
+---- Monday 22 June 2020 ----
+  Minimum Temperature: 15.0°C
+  Maximum Temperature: 21.7°C
+
+---- Tuesday 23 June 2020 ----
+  Minimum Temperature: 11.1°C
+  Maximum Temperature: 21.7°C
+
+---- Wednesday 24 June 2020 ----
+  Minimum Temperature: 11.1°C
+  Maximum Temperature: 19.4°C
+
+---- Thursday 25 June 2020 ----
+  Minimum Temperature: 8.9°C
+  Maximum Temperature: 18.9°C
+
+---- Friday 26 June 2020 ----
+  Minimum Temperature: 11.7°C
+  Maximum Temperature: 18.9°C
+
