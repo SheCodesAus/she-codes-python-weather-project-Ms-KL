@@ -3,8 +3,22 @@ from datetime import datetime
 
 DEGREE_SYBMOL = u"\N{DEGREE SIGN}C"
 
-# cd C:\GIT\python-assignment\she-codes-python-weather-project-Ms-KL
+# additional function
+def format_single_list (weather_data):
+    """converts unformatted list input to formatted list
 
+    Args:
+        weather_data: A list of numbers.
+    Returns:
+        List of numbers as a float
+    """
+    if weather_data == []:
+        return ()
+    else:
+        formatted_list = []
+        for i in weather_data:
+            formatted_list.append(float(i))
+        return formatted_list
 
 def format_temperature(temp):
     """Takes a temperature and returns it in string format with the degrees
@@ -29,7 +43,6 @@ def convert_date(iso_string):
     date_time = datetime.fromisoformat(iso_string)
     convert_date = date_time.strftime("%A %d %B %Y")
     return convert_date
-    pass
 
 #--3 ------ DONE
 def convert_f_to_c(temp_in_farenheit):
@@ -42,7 +55,6 @@ def convert_f_to_c(temp_in_farenheit):
     """
     temp_in_c = (float(temp_in_farenheit) - 32) * .5556
     return round(temp_in_c,1) 
-    pass
 
 #--4 ------ DONE
 def calculate_mean(weather_data):
@@ -53,12 +65,15 @@ def calculate_mean(weather_data):
     Returns:
         A float representing the mean value.
     """
-    sum = 0
-    for i in weather_data:
-        sum = float(sum)+float(i)
-    mean = sum / len(weather_data)
-    return mean
-    pass
+    if weather_data == []:
+        return 0
+    else:
+        calc_list = format_single_list(weather_data)
+        sum = 0
+        for i in calc_list:
+            sum = sum+i
+        mean = sum / len(calc_list)
+        return mean
 
 #--5 -------- DONE
 def load_data_from_csv(csv_file):
@@ -72,36 +87,32 @@ def load_data_from_csv(csv_file):
     csv_list = []
     with open(csv_file, encoding="utf-8") as csv_open:
         reader = csv.reader (csv_open)
-        header = next(reader)
+        next(reader)
         for line in reader:
-            if not (line):
+            if not (line): #checking for empty line
                 continue
             csv_list.append([line[0],int(line[1]),int(line[2])])
     return csv_list
-    pass
+
+
 
 #--6 ---- DONE
 def find_min(weather_data):
     """Calculates the minimum value in a list of numbers.
-
     Args:
         weather_data: A list of numbers.
     Returns:
         The minium value and it's position in the list.
     """
-    if weather_data != []:
-        weather_data_list = []
-        for i in weather_data:
-            weather_data_list.append(float(i))
-        min_temp = min(weather_data_list)
-        for i in range(len(weather_data_list)):
-            if weather_data_list[i] == min_temp:
+    if weather_data == []:
+        return ()
+    else:
+        calc_list = format_single_list(weather_data)
+        min_temp = min(calc_list)
+        for i in range(len(calc_list)):
+            if calc_list[i] == min_temp:
                 min_index = i
         return min_temp, min_index
-    else:
-        return ()
-
-    pass
 
 #--7
 def find_max(weather_data):
@@ -112,18 +123,16 @@ def find_max(weather_data):
     Returns:
         The minium value and it's position in the list.
     """
-    if weather_data != []:
-        weather_data_list = []
-        for i in weather_data:
-            weather_data_list.append(float(i))
-        max_temp = max(weather_data_list)
-        for i in range(len(weather_data_list)):
-            if weather_data_list[i] == max_temp:
+    if weather_data == []:
+        return ()
+    else:
+        calc_list = format_single_list(weather_data)
+        max_temp = max(calc_list)
+        for i in range(len(calc_list)):
+            if calc_list[i] == max_temp:
                 max_index = i
         return max_temp, max_index
-    else:
-        return ()
-    pass
+
 
 #--8
 def generate_summary(weather_data):
@@ -190,14 +199,10 @@ def generate_daily_summary(weather_data):
     Returns:
         A string containing the summary information.
     """
-    
-
-# --- working it out
-
-# GOALS:
-# day_date
-# day_min_temp
-# day_max_temp
+    # ----- GOALS ------
+    # day_date
+    # day_min_temp
+    # day_max_temp
 
     # STEP 1 GET DATA:
     # convert weather data a list to allocate to required variables
@@ -212,6 +217,7 @@ def generate_daily_summary(weather_data):
     
     # STEP 2 ALLOCATE VARIABLES:
     # index the weather_list and allocate to date_time, min and max
+    # create a string using for loop with first iteration of results, then add to the string with each iteration
 
     daily_summary_string = ""
     last_string = ""
