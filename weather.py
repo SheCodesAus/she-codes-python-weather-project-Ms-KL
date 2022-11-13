@@ -5,7 +5,7 @@ DEGREE_SYBMOL = u"\N{DEGREE SIGN}C"
 
 # additional function
 def format_single_list (weather_data):
-    """converts unformatted list input to formatted list
+    """converts unformatted list to formatted list
 
     Args:
         weather_data: A list of numbers.
@@ -87,13 +87,12 @@ def load_data_from_csv(csv_file):
     csv_list = []
     with open(csv_file, encoding="utf-8") as csv_open:
         reader = csv.reader (csv_open)
-        next(reader)
+        next(reader) #skips header
         for line in reader:
             if not (line): #checking for empty line
                 continue
             csv_list.append([line[0],int(line[1]),int(line[2])])
     return csv_list
-
 
 
 #--6 ---- DONE
